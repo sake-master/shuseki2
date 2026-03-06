@@ -715,11 +715,10 @@
     document.getElementById('loading').classList.add('visible');
 
     try {
-      const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      const response = await fetch('https://sake-proxy.suzuki-logic.workers.dev', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer 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' // ← GroqのAPIキーに置き換えてください
         },
         body: JSON.stringify({
           model: 'llama-3.3-70b-versatile',
